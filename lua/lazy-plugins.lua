@@ -29,7 +29,9 @@ local function load_kickstart_plugins()
 			local plugin_name = file:gsub("%.lua$", "")
 
 			local success, plugin = pcall(require, "kickstart.plugins." .. plugin_name)
-			if not success then
+			if success then
+				table.insert(plugins, plugin)
+			else
 				print("Failed to load " .. plugin_name .. ": " .. plugin)
 			end
 		end
