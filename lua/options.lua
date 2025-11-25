@@ -40,7 +40,7 @@ vim.o.signcolumn = "yes"
 vim.o.updatetime = 250
 
 -- Decrease mapped sequence wait time
-vim.o.timeoutlen = 300
+vim.o.timeoutlen = 1000
 
 -- Configure how new splits should be opened
 vim.o.splitright = true
@@ -69,6 +69,16 @@ vim.o.scrolloff = 10
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
-vim.o.confirm = true
+-- vim.o.confirm = true
+
+-- Enable visual line wrapping (like Emacs visual-line-mode)
+vim.o.wrap = true
+vim.o.linebreak = true
+vim.o.showbreak = "↪ "
+
+-- Disable swap files (like Emacs behavior)
+vim.o.swapfile = false -- No swap files
+vim.o.backup = false -- No backup files
+vim.o.writebackup = false -- No backup before overwriting file
 
 -- vim: ts=2 sts=2 sw=2 et

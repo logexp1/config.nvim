@@ -58,6 +58,10 @@ return {
 				--
 				-- See :h blink-cmp-config-keymap for defining your own keymap
 				preset = "default",
+				["<Tab>"] = { "select_next", "fallback" },
+				["<S-Tab>"] = { "select_prev", "fallback" },
+				["<CR>"] = { "select_and_accept", "fallback" },
+				["<C-?>"] = { "show", "show_documentation", "hide_documentation" },
 
 				-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 				--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -98,4 +102,5 @@ return {
 		},
 	},
 }
+
 -- vim: ts=2 sts=2 sw=2 et
