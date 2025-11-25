@@ -81,4 +81,7 @@ vim.o.swapfile = false -- No swap files
 vim.o.backup = false -- No backup files
 vim.o.writebackup = false -- No backup before overwriting file
 
+-- Fine-tune wrapped line display
+vim.opt.breakindentopt = "shift:2,min:40,sbr"
+
 -- vim: ts=2 sts=2 sw=2 et
