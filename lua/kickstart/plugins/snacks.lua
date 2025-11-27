@@ -1,14 +1,14 @@
 return {
   {
-    "folke/snacks.nvim",
+    'folke/snacks.nvim',
     priority = 1000,
     lazy = false,
     opts = {
-      dashboard = { example = "doom" },
+      dashboard = { example = 'doom' },
       picker = {
         enabled = true,
         layout = {
-          preset = "ivy",
+          preset = 'ivy',
         },
         matcher = {
           frecency = true,
@@ -16,7 +16,7 @@ return {
         win = {
           input = {
             keys = {
-              ["<Esc>"] = { "close", mode = { "n", "i" } },
+              ['<Esc>'] = { 'close', mode = { 'n', 'i' } },
             },
           },
         },
@@ -28,74 +28,74 @@ return {
     },
     keys = {
       {
-        "<leader><space>",
+        '<leader><space>',
         function()
           Snacks.picker.smart()
         end,
-        desc = "Smart Find Files",
+        desc = 'Smart Find Files',
       },
       {
-        "<leader>,",
+        '<leader>s',
         function()
           Snacks.picker.buffers()
         end,
-        desc = "switch to buffers",
+        desc = 'switch to buffers',
       },
       {
-        "<leader>/",
+        '<leader>/',
         function()
           Snacks.picker.git_grep()
         end,
-        desc = "grep in git preojects",
+        desc = 'grep in git preojects',
       },
       {
-        "<leader>:",
+        '<leader>:',
         function()
           Snacks.picker.command_history()
         end,
-        desc = "Command history",
+        desc = 'Command history',
       },
       {
-        "<leader>ff",
+        '<leader>ff',
         function()
           Snacks.picker.files()
         end,
-        desc = "Find Files from home directory",
+        desc = 'Find Files from home directory',
       },
       {
-        "<leader>p",
+        '<leader>p',
         function()
           Snacks.picker.git_files()
         end,
-        desc = "find files (in projects)",
+        desc = 'find files (in projects)',
       },
       {
-        "<leader>fb",
+        '<leader>fb',
         function()
           Snacks.picker.buffers()
         end,
-        desc = "Buffers",
+        desc = 'Buffers',
       },
       {
-        "<leader>fr",
+        '<leader>fr',
         function()
           Snacks.picker.recent()
         end,
-        desc = "Recent Files",
+        desc = 'Recent Files',
       },
       {
-        "<leader>c",
+        '<leader>c',
         function()
           Snacks.picker.projects()
         end,
-        desc = "change project",
+        desc = 'change project',
       },
       {
-        "<leader>:",
+        '<leader>:',
         function()
           Snacks.picker.command_history()
         end,
-        desc = "Command History",
+        desc = 'Command History',
       },
     },
   },

@@ -62,9 +62,9 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
-vim.keymap.set('n', ',e', function()
-                 vim.cmd('edit ' .. vim.fn.stdpath 'config' .. '/init.lua')
-end, { desc = 'Edit init.lua' })
+vim.keymap.set("n", ",e", function()
+	vim.cmd("edit " .. vim.fn.stdpath("config") .. "/init.lua")
+end, { desc = "Edit init.lua" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -87,16 +87,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Auto change directory to current buffer's directory
 vim.api.nvim_create_autocmd("BufEnter", {
-  callback = function()
-    -- Skip for oil buffers
-    if vim.bo.filetype == "oil" then
-      return
-    end
+	callback = function()
+		-- Skip for oil buffers
+		if vim.bo.filetype == "oil" then
+			return
+		end
 
-    -- Check if the buffer has a valid file path
-    local filepath = vim.fn.expand("%:p:h")
-    if filepath ~= "" and vim.fn.isdirectory(filepath) == 1 then
-      vim.cmd("lcd " .. filepath)
-    end
-  end,
+		-- Check if the buffer has a valid file path
+		local filepath = vim.fn.expand("%:p:h")
+		if filepath ~= "" and vim.fn.isdirectory(filepath) == 1 then
+			vim.cmd("lcd " .. filepath)
+		end
+	end,
 })
